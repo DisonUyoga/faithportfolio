@@ -34,8 +34,8 @@
   {{- $currentPage := . }}
   <ul class="desktop-navigation">
     {{ range .Site.Menus.main }}
-    {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
-    {{- $page_url:= $currentPage.Permalink | absLangURL }}
+    {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) }}
+    {{- $page_url:= $currentPage.Permalink}}
     {{- $is_search := eq ($.Site.GetPage .KeyName).Layout `search` }}
     <li>
       <a 
@@ -73,8 +73,8 @@
       {{- $currentPage := . }}
       <ul>
         {{ range .Site.Menus.main }}
-        {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
-        {{- $page_url:= $currentPage.Permalink | absLangURL }}
+        {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | "/" }}
+        {{- $page_url:= $currentPage.Permalink | "/"}}
         {{- $is_search := eq ($.Site.GetPage .KeyName).Layout `search` }}
         <li>
           <a href="{{ .URL }}" title="{{ .Name | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"

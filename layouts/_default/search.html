@@ -12,11 +12,11 @@
             {{- $currentPage := . }}
                 <ul style="display:flex;gap:10px;flex-wrap:wrap;list-style-type: none;margin-top: 10px;">
                     {{- range .Site.Menus.search }}
-                    {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
-                    {{- $page_url:= $currentPage.Permalink | absLangURL }}
+                    {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) }}
+                    {{- $page_url:= $currentPage.Permalink }}
                     {{- $is_search := eq ($.Site.GetPage .KeyName).Layout `search` }}
 
-                        <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
+                        <a href="{{ .URL  }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
                         {{- cond $is_search (" accesskey=/" | safeHTMLAttr) ("" | safeHTMLAttr ) }}>
                             <kbd>
                                 {{- .Pre }}
