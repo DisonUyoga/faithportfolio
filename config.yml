@@ -45,7 +45,7 @@ params:
   description: Your website description
   math: false
   images:
-    - "/uploads/og.webp"
+    - "/uploads/barista-5.jpg"
   label:
     title: _Faith Edwina_
     text: Welcome to Faith's Barista Portfolio
