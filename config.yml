@@ -1,0 +1,184 @@
+---
+baseURL: https://piko-heksagon.netlify.app/
+languageCode: en-us
+title: Faith Edwina
+# theme: piko
+# module:
+#   imports:
+#     - path: github.com/DisonUyoga/piko
+
+paginate: "9"
+copyright: A template by [Dison](https://www.disonobudho.pages.dev "Your most friendly developer")
+googleAnalytics: # Enter Google Analytics ie. UA-012345678-9
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+minify:
+  disableCSS: false
+  disableHTML: false
+  disableJS: false
+  disableJSON: false
+  disableSVG: false
+  disableXML: false
+  minifyOutput: true
+  tdewolff:
+    html:
+      keepWhitespace: false
+
+params:
+  analytics:
+    google:
+      SiteVerificationTag: # Google Site Verification
+    yandex:
+      SiteVerificationTag: # Yandex Site Verification
+    bing:
+      SiteVerificationTag: # Bing Site Verification
+  env: production
+  author: Faith Edwina
+  description: Your website description
+  math: false
+  images:
+    - "/uploads/og.webp"
+  label:
+    title: _Faith Edwina_
+    text: Welcome to Faith's Barista Portfolio
+    lightNavIcon: /uploads/sun.svg
+    darkNavIcon: /uploads/zap.svg
+    iconHeight: "35"
+    iconWIdth: "35"
+  comments: true
+  mainSections:
+    - blog
+  ShowShareButtons: true
+  ShowCodeCopyButtons: true
+  ShowRelated: true
+  CookieNotice:
+    We use cookies to improve your experience on our site and to show
+    you relevant advertising.
+  CookieLink: /legal/privacy/#cookies-and-web-beacons
+  CookieButton: Cookies Policy
+  disableAnchoredHeadings: false
+  contactFormAction: # Get link from https://formsubmit.io or https://fabform.io
+  assets:
+    disableFingerprinting: false
+    favicon: /uploads/zap.svg
+    favicon16x16: /uploads/zap.svg
+    favicon32x32: /uploads/zap.svg
+    apple_touch_icon: /uploads/zap.svg
+    safari_pinned_tab: /uploads/zap.svg
+  ShowReadingTime: true
+  ShowBreadCrumbs: true
+  cover:
+    - image: /uploads/barista-1.jpg
+  homepage:
+    # Hero Section
+    disableHeroSection: false
+    heroUpperTitle:
+    heroTitle: Faith Edwina
+    heroDescription: Sip, savor, and discover the art of coffee through my journey. From the finest beans to the perfect brew, explore my passion for crafting exceptional coffee experiences. Let's brew something special together!
+    heroCTAPrimaryText: Blog
+    heroCTAPrimaryUrl: "/blog/"
+    heroCTASecondaryText: Contact Me
+    heroCTASecondaryUrl: "/contact/"
+    heroBackgroundImage: "/uploads/barista.jpg"
+    # Blog Section
+    disableBlogSection: false
+    blogTitle: Latest Posts
+    blogDescription: This is my latest blog posts
+    seeMoreText: More Posts
+    # About Section
+    disableAboutSection: false
+    aboutTitle: About
+    aboutDescription: Just something about me
+    aboutImgUrl: "/uploads/faithEdwina.jpg"
+    aboutContent: Crafting Coffee with Passion and Precision. I am currently in Qatar working at Lingua Coffee. I am open to more competent job offers with no geographical borders. My dream is to spread my talent across the globe and put a smile on people's faces every morning when taking coffee at their favourite joint.
+    # Portfolio Section
+    disablePortfolioSection: false
+    portfolioTitle: Portfolio
+    portfolioDescription: Some of my works
+    portfolio:
+      - imageUrl: /uploads/barista-1.jpg
+        alt: # image alt for better SEO
+        description: Enjoy.
+        websiteUrl: #
+      - imageUrl: /uploads/barista-2.jpg
+        alt: # image alt for better SEO
+        description: Art in coffee.
+        websiteUrl: #
+      - imageUrl: /uploads/barista-3.jpg
+        alt: # image alt for better SEO
+        description: Possible with Faith.
+        websiteUrl: #
+      - imageUrl: /uploads/barista-4.jpg
+        alt: # image alt for better SEO
+        description: Deep Urge.
+        websiteUrl: #
+      - imageUrl: /uploads/barista-5.jpg
+        alt: # image alt for better SEO
+        description: Lets drink together.
+        websiteUrl: #
+  # Search Options (https://fusejs.io/)
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: "0"
+    distance: "1000"
+    threshold: "0.4"
+    minMatchCharLength: "0"
+    keys:
+      - title
+      - permalink
+      - summary
+      - content
+  plugins:
+    css:
+      - link: plugins/css/pico.min.css
+    js:
+      - link: plugins/js/feather.min.js
+menus:
+  main: # Main Menu
+    - name: Home
+      title: Home
+      pre: home
+      url: "/"
+      weight: "19"
+    - name: Blog
+      title: Blog
+      pre: pen-tool
+      url: "/blog"
+      weight: "20"
+    # - name: Search
+    #   title: Search
+    #   pre: search
+    #   url: "/search"
+    #   weight: "30"
+    - name: Contact
+      title: Contact
+      pre: mail
+      url: "/contact"
+      weight: "40"
+    - name: Instagram
+      title:
+      pre: instagram
+      url: https://www.instagram.com/lingua.ae/
+      weight: "50"
+  search: # Search page's quick links
+    - name: Categories
+      title: Categories
+      url: "/categories"
+      weight: "10"
+    - name: Archives
+      title: Archives
+      url: "/archives"
+      weight: "20"
+    - name: Tags
+      title: Tags
+      url: "/tags"
+      weight: "30"

@@ -1,0 +1,21 @@
+{
+  "name": "piko",
+  "version": "1.0.0",
+  "description": "<h1 align='center'>\r Piko | <a target=\"_blank\" href=\"https://piko-heksagon.netlify.app/\" rel=\"nofollow\">Demo</a> | <a target=\"_blank\" href=\"https://googlechrome.github.io/lighthouse/viewer/?gist=f7cc22c0b0323e1b36e5d47bf2393acf\" rel=\"nofollow\">Lighthouse report (100%)</a>\r </h1>",
+  "main": "index.js",
+  "scripts": {
+    "dev": "hugo server --gc --disableFastRender",
+    "dev:drafts": "hugo server --gc --disableFastRender --buildFuture --buildDrafts",
+    "build": "hugo --gc --cleanDestinationDir --minify",
+    "start": "hugo server --gc --disableFastRender --renderStaticToDisk --cleanDestinationDir",
+    "start:production": "hugo server --gc --disableFastRender --renderStaticToDisk --cleanDestinationDir --environment production --minify",
+    "npm-check": "npm-check -u"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hugo-installer": "^4.0.1",
+    "npm-check": "^6.0.1"
+  }
+}
